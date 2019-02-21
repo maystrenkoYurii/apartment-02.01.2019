@@ -1,0 +1,14 @@
+@import '../../../node_modules/reset-css';
+@import '../fonts/styles.css';
+
+body {
+  overflow-x: hidden;
+}
+
+html,
+body,
+#appMountPoint {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

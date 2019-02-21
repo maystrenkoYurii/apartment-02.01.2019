@@ -1,0 +1,30 @@
+variables:
+  SITE_MASTER: 'www@portal.webcontinent.local'
+  BASEDIR: '/opt/www'
+stages:
+  - deploy
+
+deploy_develop:
+  stage: deploy
+  script:
+    - ~/publisher.sh
+  environment:
+    name: development
+    url: http://portal.webcontinent.local
+  only:
+    - dev
+  tags:
+    - node-core
+
+deploy_master:
+  stage: deploy
+  script:
+    - ~/publisher.sh
+  environment:
+    name: production
+    url: http://portal.webcontinent.local
+  only:
+    - master
+  tags:
+    - node-core
+  when: manual

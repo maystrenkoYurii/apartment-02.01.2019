@@ -1,0 +1,30 @@
+export const constants = Object.freeze({
+  APP_NAME: 'Apartment',
+
+  API_URL: 'http://portal.emerline.com.ua',
+
+  PATCH_URL_HOME: '/',
+  PATCH_URL_AUTH: '/authentication',
+  PATCH_URL_PROFILE: '/profile',
+  PATCH_URL_MESSAGES: '/messages',
+  PATCH_URL_NOTIFICATIONS: '/notifications',
+  PATCH_URL_USERS: '/users',
+  PATCH_URL_OBJECT: '/object',
+  PATCH_URL_ORGANIZATIONS: '/organizations',
+  PATCH_URL_STATISTICS: '/statistics',
+  PATCH_URL_NEWS: '/news',
+  PATCH_URL_NOTES: '/notes',
+  PATCH_URL_ABOUT: '/about',
+  PATCH_URL_TERM_OF_USE: '/term-of-use',
+  PATCH_URL_PRIVACY_POLICY: '/privacy-policy',
+
+  AUTH_USER: 'user',
+  AUTH_TOKEN: 'token',
+  COOKIE_MAX_AGE: 1000 * 60 * 60 * 24 * 365,
+  SETTINGS: 'settings',
+  LANGUAGE_COOKIE_NAME: 'language',
+  LANGUAGE_UK: 'uk',
+  LANGUAGE_RU: 'ru',
+  LANGUAGE_EN: 'en',
+  SUPPORTED_LANGUAGES: ['uk', 'ru', 'en'],
+});
