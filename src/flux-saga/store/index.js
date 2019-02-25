@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware, { END } from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
 import { routerMiddleware } from 'connected-react-router';
 
@@ -17,7 +18,7 @@ const development = constants.NODE_DEV;
 export const configureStore = (history, initialState = {}) => {
   const sagaMiddleware = createSagaMiddleware();
 
-  const middleware = [sagaMiddleware, routerMiddleware(history)];
+  const middleware = [sagaMiddleware, routerMiddleware(history), thunk];
 
   if (development && client) {
     middleware.push(logger);
