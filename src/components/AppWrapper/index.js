@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import classNames from 'classnames';
-import Div100vh from 'react-div-100vh';
 
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -214,7 +213,7 @@ class AppWrapper extends Component {
         <AppTermsOfUseDialog />
         <AppPrivacyPolicyDialog />
         <DialogChangePassword />
-        <Div100vh className={classes.root}>
+        <div className={classes.root}>
           <AppBar
             position="fixed"
             className={classNames(
@@ -247,7 +246,7 @@ class AppWrapper extends Component {
             <div className={classes.toolbar} />
             {children}
           </main>
-        </Div100vh>
+        </div>
       </Fragment>
     );
   }
